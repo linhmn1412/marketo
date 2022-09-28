@@ -1,0 +1,122 @@
+ @mixin badge {
+    bottom: calc(100% - 16px);
+    left: 20px;
+ }
+
+
+ @mixin locationCircle () {
+    bottom: calc(100% - 20px);
+    left: calc(100% - 10px);
+ }
+
+@mixin createBadge($content,$color){
+    &::after {
+        content: $content;
+        cursor: pointer;
+        position: absolute;
+  
+        font-size: 11px;
+        font-weight: 500;
+        color: white;
+        padding: 5px 3px;
+        width: 30px;
+        text-align: center;
+        background-color: $color;
+        @include badge();
+    }
+    &::before {
+        content: "";
+        cursor: pointer;
+        position: absolute;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent transparent $color;
+        transform: translateY(50%);
+        @include badge();
+    }
+}
+
+@mixin createRectangle($content,$color){
+    &::before {
+        content: $content;
+        cursor: pointer;
+        position: absolute;
+        font-size: 7px;
+        line-height: -10;
+        font-weight: 500;
+        color: white;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background-color: $color;
+    }
+}
+
+
+@mixin createCircle ($length,$color){
+    position: absolute;
+    background-color: $color;
+    height: $length;
+    width: $length;
+    border-radius: 50%;
+    font-size: 12px;
+    border: 3px solid #fff;
+    text-align: center;
+}
+
+@mixin createHoverButton($color) {
+    &::before {
+        content: "";                    
+        position: absolute;
+        z-index: -1;
+        left: 100%;
+        top: 50%;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: $color;
+        transform: scale(0);
+        transition: all 0.5s;
+      
+    }
+}
+
+@mixin createHoverBanner (){
+    &::before {
+        content: "";     
+        opacity: 0;          
+        position: absolute;
+        z-index: 100;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color:rgba(255,255,255,.5);
+        transform: translate(150%,-100%) scale3d(1.9,1.4,1) rotate3d(0,0,1,55deg);
+        transition: all 1.8s;
+    }
+}
+
+@mixin createHoverClickNavTabs (){
+    &::before {
+        content: "";
+        height: 2px;
+        width: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fed700;
+        position: absolute;
+        top: 100%;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 8px solid #fed700;
+    }
+}

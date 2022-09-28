@@ -1,0 +1,110 @@
+@keyframes dropDown-Home {
+    from {
+        transform: translate(-30%, -10px);
+    }
+    to {
+        transform: translate(-30%, 0);
+    }
+}
+@keyframes moveDown {
+    from {
+        transform: translateY(-10px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(10px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveUp_meta {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+@keyframes moveDown_info {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(10px);
+    }
+}
+@keyframes moveDown_desc {
+    from {
+        transform: translateY(-10px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes moveLeftToRight100 {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveLeftToRight100_back {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes moveLeftToRight200 {
+    from {
+        transform: translateX(-200%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes moveRightToLeft200-md-lg-xl {
+    from {
+        transform: translateX(200%);
+    }
+    to {
+        transform: translateX(-6px);
+    }
+}
+@keyframes moveRightToLeft200-xs-sm {
+    from {
+        transform: translateX(200%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes moveRightToLeft100 {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveRightToLeft100_back {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
